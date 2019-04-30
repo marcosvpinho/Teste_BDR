@@ -17,14 +17,14 @@ class DatabaseConnection
     }
     function closeConnection()
     {
-		$this->link = null;
-	}
+        $this->link = null;
+    }
     
     public function query($query)
     {
         $stmt = $this->link->query($query);
         $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
-		return $result;
-	}
+        return $result;
+    }
 }
 ?>
